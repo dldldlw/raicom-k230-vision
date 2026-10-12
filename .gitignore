@@ -1,0 +1,35 @@
+# ---- IDE / 编辑器 ----
+.idea/
+.vscode/
+*.iml
+*.swp
+*~
+
+# ---- Python ----
+__pycache__/
+*.py[cod]
+
+# ---- 模型与部署资产 ----
+# kmodel 是训练产出的二进制权重大文件，不适合直接进 git。
+# 请按 docs/deploy.md 自行转换并放到 K230 的 /sdcard/mp_deployment_source/。
+*.kmodel
+*.onnx
+*.pt
+
+# deploy_config.json 含本机部署路径与类别配置，只提交 configs/ 下的模板
+deploy_config.json
+
+# ---- 运行时产物 ----
+*.log
+#
+# ⚠️ 这里**不要**写 *.png / *.jpg / *.bmp 这类通配！
+#    它会连 docs/awards/ 下的获奖证书一起忽略掉，导致证书根本传不上 GitHub。
+#    （这是实际踩过的坑，可以用 `git check-ignore -v <路径>` 复现。）
+#    如果以后确实要忽略运行期抓拍的图片，请**按目录**忽略，例如：
+#      /captures/
+#      /output/
+
+# ---- 系统 ----
+.DS_Store
+Thumbs.db
+desktop.ini

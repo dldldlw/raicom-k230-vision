@@ -1,0 +1,15 @@
+{
+    "kmodel_path": "your_model.kmodel",
+    "model_type": "AnchorBaseDet",
+    "img_size": [320, 320],
+    "num_classes": 2,
+    "categories": ["class_a", "class_b"],
+    "confidence_threshold": 0.5,
+    "nms_threshold": 0.45,
+    "nms_option": false,
+    "anchors": [
+        [10, 13, 16, 30, 33, 23],
+        [30, 61, 62, 45, 59, 119],
+        [116, 90, 156, 198, 373, 326]
+    ]
+}
